@@ -1,0 +1,21 @@
+<h1>Dukani</h1>
+<table class="table">
+	<thead>
+		<tr>
+			<th>d_id</th>
+			<th>ime</th>
+			<th>adresa</th>
+			<th>Edit</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="model in modeli">
+			<td>{{model.model_id}}</td>
+			<td>{{dukan.ime}}</td>
+			<td>{{dukan.adresa}}</td>
+			<td>Edit</td>	
+			<td title="Delete"><button><i class="fa fa-trash" style="font-size:24px;color:red"></i></button></td>	
+		</tr>
+	</tbody>
+</table>

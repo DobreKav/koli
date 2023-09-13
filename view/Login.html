@@ -1,0 +1,23 @@
+<h3>Nov user</h3>
+<div class="alert alert-success" ng-show="alert_succ">!!!Uspesno vnesovte dukan</div>
+<div class="alert alert-danger" ng-show="alert_danger">!!!Popolni pravilno</div>
+<form name="myForm">
+<div class="mb-3 mt-3">
+    <label for="ime" class="form-label">Ime:</label>
+	<span class="bg-danger" ng-show="myForm.ime.$invalid && myForm.ime.$dirty">Име со 3 карактери</span>
+    <input type="text" class="form-control" placeholder="Enter ime" id="ime" name="ime" ng-model="ime" ng-minlength="3" required>
+  </div>
+  <div class="mb-3">
+    <label for="adresa" class="form-label">Adresa:</label>
+	<span class="bg-danger" ng-show="myForm.adresa.$invalid && myForm.adresa.$dirty">Adresa so 3-20 карактери</span>
+    <input type="text" class="form-control" placeholder="Enter Adresa" id="adresa" name="adresa" ng-model="adresa" ng-minlength="3" ng-maxlength="20">
+  </div>
+  <button type="button" class="btn btn-success"
+	ng-click="
+	(myForm.ime.$valid && myForm.adresa.$valid)
+		?   details_dukani(ime,adresa) 
+		: 	erorr()	">
+				SAVE
+  </button>
+
+</form>
